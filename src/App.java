@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Conta> contas = new ArrayList<>();
-        List<Transferencia> transferencias = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in); // para ler as entradas do usuário
+        List<Conta> contas = new ArrayList<>(); // lista de contas cadastradas
+        List<Transferencia> transferencias = new ArrayList<>(); // lista de transferências realizadas
         Conta conta = null; // conta que está logada
-        int entrada = 0;
+        int entrada = 0; // entrada do usuário
 
         while (true) {
 
@@ -179,7 +179,7 @@ public class App {
                                             + "R$ " + t.getValor());
                                 } else if (t.getContaDestino() == conta) {
                                     System.out.println(
-                                            "Transferência de " + t.getContaOrigem().getNome() + " - " + t.getValor());
+                                            "Transferência recebida de " + t.getContaOrigem().getNome() + " - " + "R$" + t.getValor());
                                 }
                             }
                             continue;
